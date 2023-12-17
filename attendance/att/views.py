@@ -56,7 +56,19 @@ def gettimetable(request):
   classid=request.POST['classid']
   timetable=Timetable.objects.filter(class_id=classid).values()
   print(timetable)
-  return JsonResponse({"Message":"Success","Data":timetable[0]})
+  est=[]
+  for x in timetable:
+   est.append(x)
+  return JsonResponse({"Message":"Success","Data":est})
+
+#   def getStudentList(request):
+  
+#  std = studenList=Student.objects.filter().values()
+#   print(timetable)
+#    lst=[]
+#   for x in std:
+#     lst.append(x)
+#   return JsonResponse({"Message":"Success","Data":lst})
 
 #  Time table(classid)
 # Student Search(id)

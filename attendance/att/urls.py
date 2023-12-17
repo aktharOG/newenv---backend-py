@@ -8,7 +8,7 @@ urlpatterns = [
     path('getnotificationforstudents', csrf_exempt(getnotificationforstudents)),
     path('getprofile', csrf_exempt(getprofile)),
     path('gettimetable', csrf_exempt(gettimetable)),
-
+   
 
 
 
